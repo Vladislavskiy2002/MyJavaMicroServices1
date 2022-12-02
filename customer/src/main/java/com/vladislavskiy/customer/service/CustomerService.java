@@ -6,7 +6,7 @@ import com.vladislavskiy.customer.model.Customer;
 import org.springframework.stereotype.Service;
 
 @Service
-public record CustomerServiceImpl(CustomerRepository customerRepository) {
+public record CustomerService(CustomerRepository customerRepository) {
     public void registerCustomer(CustomerRegistationRequest request) {
         Customer customer = Customer.builder()
                 .firstName(request.firstName())
