@@ -1,9 +1,7 @@
-package com.vladislavskiy.customer;
+package com.vladislavskiy.customer.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.sun.istack.NotNull;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "micro")
+@Table(name = "customer")
 public class Customer{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +21,6 @@ public class Customer{
     private String lastName;
     @Column(name = "email")
     private String email;
+
+
 }
