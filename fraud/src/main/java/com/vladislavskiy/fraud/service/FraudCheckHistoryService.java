@@ -7,13 +7,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 @Service
-public class FraudCheckHistoryService {
-    private FraudCheckHistoryRepository fraudCheckHistoryRepository;
-
-    FraudCheckHistoryService(FraudCheckHistoryRepository fraudCheckHistoryRepository)
-    {
-        this.fraudCheckHistoryRepository = fraudCheckHistoryRepository;
-    }
+public record FraudCheckHistoryService(FraudCheckHistoryRepository fraudCheckHistoryRepository) {
 
     public boolean isFraudulentCustomer(Integer customerId){
         fraudCheckHistoryRepository.save(
