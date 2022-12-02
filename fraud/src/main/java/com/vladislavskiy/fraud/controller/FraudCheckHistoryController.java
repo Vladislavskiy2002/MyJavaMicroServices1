@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/fraud-check")
 public class FraudCheckHistoryController {
 
-    private FraudCheckHistoryService fraudCheckHistoryService;
+    final private FraudCheckHistoryService fraudCheckHistoryService;
 
     public FraudCheckHistoryController(FraudCheckHistoryService fraudCheckHistoryService) {
         log.info("FraudCheckHistoryController is opened");
